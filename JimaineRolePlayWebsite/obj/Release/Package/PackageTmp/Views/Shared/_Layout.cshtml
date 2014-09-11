@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roleplaying support with session scheduler and forum.">
+  <meta name="keywords" content="Roleyplay, forum, scheduler, Dungeoons and Dragons, Das schwarze Auge">
+  <meta name="author" content="Mike Gr&uuml;newald">
+  <title>Jimaine - @ViewBag.Title</title>
+  @Styles.Render("~/Content/css")
+  @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+  <div id="bodyWrapper">
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top MyNavbar">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="@Url.Action("Index", "Home")">
+              <img src="@Url.Content("~/Content/Images/JimaineV2.png")" class="MainLogo" alt="Jimaine-Logo">
+            </a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>@Html.ActionLink("Home", "Index", "Home")</li>
+              <li>@Html.ActionLink("Scheduler", "About", "Home")</li>
+              <li>@Html.ActionLink("Forum", "Contact", "Home")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+          <ul class="navbar-nav">
+            <li>@Html.ActionLink("About", "About", "Home")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <li>|</li>
+            <li>&copy; @DateTime.Now.Year by Mike Gr&uuml;newald</li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+  </div>
+</body>
+</html>
