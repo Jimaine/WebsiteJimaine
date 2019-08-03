@@ -20,6 +20,13 @@ namespace JimaineRolePlayWebsite.Controllers
             return View();
         }
 
+        public ActionResult DevelopingDays()
+        {
+            ViewBag.Message = "Collection of Developing Days";
+
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
