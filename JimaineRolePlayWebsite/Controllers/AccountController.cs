@@ -101,16 +101,9 @@ namespace JimaineRolePlayWebsite.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Disassociate(string loginProvider, string providerKey)
         {
-            ManageMessageId? message = null;
             IdentityResult result = await UserManager.RemoveLoginAsync(User.Identity.GetUserId(), new UserLoginInfo(loginProvider, providerKey));
-            if (result.Succeeded)
-            {
-                message = ManageMessageId.RemoveLoginSuccess;
-            }
-            else
-            {
-                message = ManageMessageId.Error;
-            }
+            ManageMessageId message = (result.Succeeded) ? ManageMessageId.RemoveLoginSuccess : ManageMessageId.Error;
+            
             return RedirectToAction("Manage", new { Message = message });
         }
 
