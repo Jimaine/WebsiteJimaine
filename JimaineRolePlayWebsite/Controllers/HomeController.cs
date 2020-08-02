@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace JimaineRolePlayWebsite.Controllers
@@ -14,23 +11,23 @@ namespace JimaineRolePlayWebsite.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult DevelopingDays()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Aufzeichnung der Developing Days";
 
             return View();
         }
 
-        public ActionResult DevelopingDays()
+        public ActionResult About()
         {
-            ViewBag.Message = "Collection of Developing Days";
+            ViewBag.Message = "Was genau ist Jimaine?";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Wie kann man mich erreichen?";
 
             return View();
         }
