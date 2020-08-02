@@ -1,7 +1,7 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(JimaineRolePlayWebsite.Startup))]
+[assembly: OwinStartup(typeof(JimaineRolePlayWebsite.Startup))]
 namespace JimaineRolePlayWebsite
 {
     public partial class Startup
