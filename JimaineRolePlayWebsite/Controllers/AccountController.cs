@@ -13,6 +13,7 @@ using JimaineRolePlayWebsite.Models;
 namespace JimaineRolePlayWebsite.Controllers
 {
     [Authorize]
+    [RequireHttps]
     public class AccountController : Controller
     {
         public AccountController()
