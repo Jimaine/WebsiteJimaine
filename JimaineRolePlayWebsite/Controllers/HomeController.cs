@@ -31,5 +31,19 @@ namespace JimaineRolePlayWebsite.Controllers
 
             return View();
         }
+
+        public ActionResult Privacy()
+        {
+            ViewBag.Message = "Wie wird mit meinen Daten umgegangen?";
+
+            return View();
+        }
+
+        public ActionResult ToDo()
+        {
+            ViewBag.Message = "Was ist hier noch zu tun?";
+
+            return View();
+        }
     }
 }

@@ -29,6 +29,7 @@
                         <ul class="nav navbar-nav">
                             <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
                             <li>@Html.ActionLink("Developing Days", "DevelopingDays", "Home")</li>
+                            <li>@Html.ActionLink("ToDos", "ToDo", "Home")</li>
                             @*<li>@Html.ActionLink("Scheduler", "About", "Home")</li>*@
                             @*<li>@Html.ActionLink("Forum", "Contact", "Home")</li>*@
                         </ul>
@@ -42,14 +43,16 @@
                 @RenderBody()
                 <hr />
                 <footer>
-                    <div>@Html.ActionLink("Über Jimaine", "About", "Home") | @Html.ActionLink("Kontakt", "Contact", "Home") | &copy; @DateTime.Now.Year by Mike Gr&uuml;newald</div>
+                    <div>@Html.ActionLink("Über Jimaine", "About", "Home") | @Html.ActionLink("Datenschutz", "Privacy", "Home") | @Html.ActionLink("Kontakt", "Contact", "Home") | &copy; @DateTime.Now.Year by Mike Gr&uuml;newald</div>
                     <br />
+                    @* cocacola.de: Nutzungsbedingungen | Kontakt | Datenschutz | Umgang mit Cookies | Impressum*@
+
                     @*<ul class="navbar-nav">
-                          <li>@Html.ActionLink("Über Jimaine", "About", "Home")</li>
-                          <li></li>
-                          <li>|</li>
-                          <li>&copy; @DateTime.Now.Year by Mike Gr&uuml;newald</li>
-                        </ul>*@
+          <li>@Html.ActionLink("Über Jimaine", "About", "Home")</li>
+          <li></li>
+          <li>|</li>
+          <li>&copy; @DateTime.Now.Year by Mike Gr&uuml;newald</li>
+        </ul>*@
                 </footer>
             </div>
         </section>
