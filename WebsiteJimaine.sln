@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteJimaine", "WebsiteJimaine\WebsiteJimaine.csproj", "{ABCCAD51-0692-4CAA-9708-167E71E93ECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteJimaine.Tests", "WebsiteJimaine.Tests\WebsiteJimaine.Tests.csproj", "{3A9754EF-7945-4F78-B17B-B49DABCA810D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABCCAD51-0692-4CAA-9708-167E71E93ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCCAD51-0692-4CAA-9708-167E71E93ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCCAD51-0692-4CAA-9708-167E71E93ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCCAD51-0692-4CAA-9708-167E71E93ECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A9754EF-7945-4F78-B17B-B49DABCA810D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A9754EF-7945-4F78-B17B-B49DABCA810D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A9754EF-7945-4F78-B17B-B49DABCA810D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A9754EF-7945-4F78-B17B-B49DABCA810D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E496AD07-22BD-411A-AD0D-3358D4E7073A}
+	EndGlobalSection
+EndGlobal
