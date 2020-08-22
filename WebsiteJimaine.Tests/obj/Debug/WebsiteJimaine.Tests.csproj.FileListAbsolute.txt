@@ -1,0 +1,2 @@
+C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine.Tests\obj\Debug\WebsiteJimaine.Tests.csprojAssemblyReference.cache
+C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine.Tests\obj\Debug\WebsiteJimaine.Tests.csproj.CoreCompileInputs.cache
