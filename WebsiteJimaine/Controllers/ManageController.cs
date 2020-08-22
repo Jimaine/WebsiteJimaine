@@ -160,14 +160,14 @@ namespace WebsiteJimaine.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
-        //
-        // GET: /Manage/VerifyPhoneNumber
-        public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
-        {
-            var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), phoneNumber);
-            // Eine SMS über den SMS-Anbieter senden, um die Telefonnummer zu überprüfen.
-            return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
-        }
+        ////
+        //// GET: /Manage/VerifyPhoneNumber
+        //public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
+        //{
+        //    var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), phoneNumber);
+        //    // Eine SMS über den SMS-Anbieter senden, um die Telefonnummer zu überprüfen.
+        //    return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
+        //}
 
         //
         // POST: /Manage/VerifyPhoneNumber

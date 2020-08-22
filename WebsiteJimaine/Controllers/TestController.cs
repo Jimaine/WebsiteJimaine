@@ -9,9 +9,15 @@ namespace WebsiteJimaine.Controllers
 {
     public class TestController : ApiController
     {
-        // Override Default Rout
+        /// <summary>
+        /// Override Default Route Test with more Parameters
+        /// With get and post
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="age"></param>
+        /// <returns></returns>
         [Route("api/Test/GetNewRoute/{userId:int}/{age:int}")]
-        [HttpGet] // [HttpPost]
+        [HttpGet, HttpPost]
         public IEnumerable<string> GetNewRoute(int userId, int age)
         {
             // Select
@@ -25,7 +31,11 @@ namespace WebsiteJimaine.Controllers
             return returnValue;
         }
 
-        // Override Default Rout
+        /// <summary>
+        /// Override Default Route Test with more Parameters
+        /// With get
+        /// </summary>
+        /// <returns></returns>
         [Route("api/Test/GetNewRoute")]
         [HttpGet] // [HttpPost]
         public IEnumerable<string> GetNewRoute()
@@ -44,7 +54,7 @@ namespace WebsiteJimaine.Controllers
         // GET api/<controller>/5
         public string Get(int id)
         {
-            return "value";
+            return $"value {id}";
         }
 
         // POST api/<controller>
@@ -52,18 +62,22 @@ namespace WebsiteJimaine.Controllers
         {
             // Create
             // in Body with ssl. Other than Get. Post > Get 
+
+            _ = value.Trim();
         }
 
         // PUT api/<controller>/5
         public void Put(int id, [FromBody] string value)
         {
             // Update
+            _ = value.ToCharArray()[id];
         }
 
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
             // Delete
+            _ = id / id;
         }
     }
 }
