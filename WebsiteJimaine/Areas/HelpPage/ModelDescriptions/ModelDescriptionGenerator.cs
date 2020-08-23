@@ -84,8 +84,12 @@ namespace WebsiteJimaine.Areas.HelpPage.ModelDescriptions
             { typeof(Boolean), "boolean" },
         };
 
-        private Lazy<IModelDocumentationProvider> _documentationProvider;
+        private readonly Lazy<IModelDocumentationProvider> _documentationProvider;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="config"></param>
         public ModelDescriptionGenerator(HttpConfiguration config)
         {
             if (config == null)
@@ -97,6 +101,9 @@ namespace WebsiteJimaine.Areas.HelpPage.ModelDescriptions
             GeneratedModels = new Dictionary<string, ModelDescription>(StringComparer.OrdinalIgnoreCase);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Dictionary<string, ModelDescription> GeneratedModels { get; private set; }
 
         private IModelDocumentationProvider DocumentationProvider
@@ -107,6 +114,11 @@ namespace WebsiteJimaine.Areas.HelpPage.ModelDescriptions
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="modelType"></param>
+        /// <returns></returns>
         public ModelDescription GetOrCreateModelDescription(Type modelType)
         {
             if (modelType == null)
@@ -120,9 +132,8 @@ namespace WebsiteJimaine.Areas.HelpPage.ModelDescriptions
                 modelType = underlyingType;
             }
 
-            ModelDescription modelDescription;
             string modelName = ModelNameHelper.GetModelName(modelType);
-            if (GeneratedModels.TryGetValue(modelName, out modelDescription))
+            if (GeneratedModels.TryGetValue(modelName, out ModelDescription modelDescription))
             {
                 if (modelType != modelDescription.ModelType)
                 {
@@ -251,8 +262,7 @@ namespace WebsiteJimaine.Areas.HelpPage.ModelDescriptions
 
         private string CreateDefaultDocumentation(Type type)
         {
-            string documentation;
-            if (DefaultTypeDocumentation.TryGetValue(type, out documentation))
+            if (DefaultTypeDocumentation.TryGetValue(type, out string documentation))
             {
                 return documentation;
             }
@@ -271,8 +281,7 @@ namespace WebsiteJimaine.Areas.HelpPage.ModelDescriptions
             IEnumerable<Attribute> attributes = property.GetCustomAttributes();
             foreach (Attribute attribute in attributes)
             {
-                Func<object, string> textGenerator;
-                if (AnnotationTextGenerator.TryGetValue(attribute.GetType(), out textGenerator))
+                if (AnnotationTextGenerator.TryGetValue(attribute.GetType(), out Func<object, string> textGenerator))
                 {
                     annotations.Add(
                         new ParameterAnnotation

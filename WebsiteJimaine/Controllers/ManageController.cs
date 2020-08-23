@@ -10,22 +10,36 @@ using WebsiteJimaine.Models;
 
 namespace WebsiteJimaine.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Authorize]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ManageController()
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userManager"></param>
+        /// <param name="signInManager"></param>
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ApplicationSignInManager SignInManager
         {
             get
@@ -38,6 +52,9 @@ namespace WebsiteJimaine.Controllers
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ApplicationUserManager UserManager
         {
             get
@@ -50,8 +67,11 @@ namespace WebsiteJimaine.Controllers
             }
         }
 
-        //
-        // GET: /Manage/Index
+        /// <summary>
+        /// GET: /Manage/Index
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -75,8 +95,12 @@ namespace WebsiteJimaine.Controllers
             return View(model);
         }
 
-        //
-        // POST: /Manage/RemoveLogin
+        /// <summary>
+        /// POST: /Manage/RemoveLogin
+        /// </summary>
+        /// <param name="loginProvider"></param>
+        /// <param name="providerKey"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> RemoveLogin(string loginProvider, string providerKey)
@@ -98,16 +122,21 @@ namespace WebsiteJimaine.Controllers
             }
             return RedirectToAction("ManageLogins", new { Message = message });
         }
-
-        //
-        // GET: /Manage/AddPhoneNumber
+ 
+        /// <summary>
+        /// GET: /Manage/AddPhoneNumber
+        /// </summary>
+        /// <returns></returns>
         public ActionResult AddPhoneNumber()
         {
             return View();
         }
 
-        //
-        // POST: /Manage/AddPhoneNumber
+        /// <summary>
+        /// POST: /Manage/AddPhoneNumber
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> AddPhoneNumber(AddPhoneNumberViewModel model)
@@ -130,8 +159,10 @@ namespace WebsiteJimaine.Controllers
             return RedirectToAction("VerifyPhoneNumber", new { PhoneNumber = model.Number });
         }
 
-        //
-        // POST: /Manage/EnableTwoFactorAuthentication
+        /// <summary>
+        /// POST: /Manage/EnableTwoFactorAuthentication
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> EnableTwoFactorAuthentication()
@@ -145,8 +176,10 @@ namespace WebsiteJimaine.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
-        //
-        // POST: /Manage/DisableTwoFactorAuthentication
+        /// <summary>
+        /// POST: /Manage/DisableTwoFactorAuthentication
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DisableTwoFactorAuthentication()
@@ -169,8 +202,11 @@ namespace WebsiteJimaine.Controllers
         //    return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
         //}
 
-        //
-        // POST: /Manage/VerifyPhoneNumber
+        /// <summary>
+        /// POST: /Manage/VerifyPhoneNumber
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> VerifyPhoneNumber(VerifyPhoneNumberViewModel model)
@@ -194,8 +230,10 @@ namespace WebsiteJimaine.Controllers
             return View(model);
         }
 
-        //
-        // POST: /Manage/RemovePhoneNumber
+        /// <summary>
+        /// POST: /Manage/RemovePhoneNumber
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> RemovePhoneNumber()
@@ -213,15 +251,20 @@ namespace WebsiteJimaine.Controllers
             return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
         }
 
-        //
-        // GET: /Manage/ChangePassword
+        /// <summary>
+        /// GET: /Manage/ChangePassword
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ChangePassword()
         {
             return View();
         }
 
-        //
-        // POST: /Manage/ChangePassword
+        /// <summary>
+        /// POST: /Manage/ChangePassword
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
@@ -244,15 +287,20 @@ namespace WebsiteJimaine.Controllers
             return View(model);
         }
 
-        //
-        // GET: /Manage/SetPassword
+        /// <summary>
+        /// GET: /Manage/SetPassword
+        /// </summary>
+        /// <returns></returns>
         public ActionResult SetPassword()
         {
             return View();
         }
 
-        //
-        // POST: /Manage/SetPassword
+        /// <summary>
+        /// POST: /Manage/SetPassword
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SetPassword(SetPasswordViewModel model)
@@ -276,8 +324,11 @@ namespace WebsiteJimaine.Controllers
             return View(model);
         }
 
-        //
-        // GET: /Manage/ManageLogins
+        /// <summary>
+        /// GET: /Manage/ManageLogins
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public async Task<ActionResult> ManageLogins(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -299,8 +350,11 @@ namespace WebsiteJimaine.Controllers
             });
         }
 
-        //
-        // POST: /Manage/LinkLogin
+        /// <summary>
+        /// POST: /Manage/LinkLogin
+        /// </summary>
+        /// <param name="provider"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LinkLogin(string provider)
@@ -309,8 +363,10 @@ namespace WebsiteJimaine.Controllers
             return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
         }
 
-        //
-        // GET: /Manage/LinkLoginCallback
+        /// <summary>
+        /// GET: /Manage/LinkLoginCallback
+        /// </summary>
+        /// <returns></returns>
         public async Task<ActionResult> LinkLoginCallback()
         {
             var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync(XsrfKey, User.Identity.GetUserId());
@@ -322,6 +378,10 @@ namespace WebsiteJimaine.Controllers
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && _userManager != null)
@@ -373,14 +433,38 @@ namespace WebsiteJimaine.Controllers
             return false;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public enum ManageMessageId
         {
+            /// <summary>
+            /// 
+            /// </summary>
             AddPhoneSuccess,
+            /// <summary>
+            /// 
+            /// </summary>
             ChangePasswordSuccess,
+            /// <summary>
+            /// 
+            /// </summary>
             SetTwoFactorSuccess,
+            /// <summary>
+            /// 
+            /// </summary>
             SetPasswordSuccess,
+            /// <summary>
+            /// 
+            /// </summary>
             RemoveLoginSuccess,
+            /// <summary>
+            /// 
+            /// </summary>
             RemovePhoneSuccess,
+            /// <summary>
+            /// 
+            /// </summary>
             Error
         }
 

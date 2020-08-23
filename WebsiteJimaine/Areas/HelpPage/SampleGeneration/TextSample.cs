@@ -7,28 +7,45 @@ namespace WebsiteJimaine.Areas.HelpPage
     /// </summary>
     public class TextSample
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="text"></param>
         public TextSample(string text)
         {
-            if (text == null)
-            {
-                throw new ArgumentNullException("text");
-            }
-            Text = text;
+            Text = text ?? throw new ArgumentNullException("text");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string Text { get; private set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
-            TextSample other = obj as TextSample;
-            return other != null && Text == other.Text;
+            //TextSample other = obj as TextSample;
+            //return other != null && Text == other.Text;
+            return obj is TextSample other && Text == other.Text;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return Text.GetHashCode();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Text;

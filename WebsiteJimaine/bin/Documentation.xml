@@ -4,6 +4,142 @@
         <name>WebsiteJimaine</name>
     </assembly>
     <members>
+        <member name="T:WebsiteJimaine.BundleConfig">
+            <summary>
+            MVC config for Bundles
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            Weitere Informationen zur Bündelung finden Sie unter https://go.microsoft.com/fwlink/?LinkId=301862.
+            </summary>
+            <param name="bundles"></param>
+        </member>
+        <member name="T:WebsiteJimaine.FilterConfig">
+            <summary>
+            MVC Config for Filters
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            Register Filter
+            </summary>
+            <param name="filters"></param>
+        </member>
+        <member name="T:WebsiteJimaine.EmailService">
+            <summary>
+            MVC E-Mail config
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.EmailService.SendAsync(Microsoft.AspNet.Identity.IdentityMessage)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.SmsService">
+            <summary>
+            MVC Sms config
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.SmsService.SendAsync(Microsoft.AspNet.Identity.IdentityMessage)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.ApplicationUserManager">
+            <summary>
+            Konfigurieren des in dieser Anwendung verwendeten Anwendungsbenutzer-Managers. UserManager wird in ASP.NET Identity definiert und von der Anwendung verwendet.
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.ApplicationUserManager.#ctor(Microsoft.AspNet.Identity.IUserStore{WebsiteJimaine.Models.ApplicationUser})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="store"></param>
+        </member>
+        <member name="M:WebsiteJimaine.ApplicationUserManager.Create(Microsoft.AspNet.Identity.Owin.IdentityFactoryOptions{WebsiteJimaine.ApplicationUserManager},Microsoft.Owin.IOwinContext)">
+            <summary>
+            Create
+            </summary>
+            <param name="options"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.ApplicationSignInManager">
+            <summary>
+            Anwendungsanmelde-Manager konfigurieren, der in dieser Anwendung verwendet wird.
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.ApplicationSignInManager.#ctor(WebsiteJimaine.ApplicationUserManager,Microsoft.Owin.Security.IAuthenticationManager)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="userManager"></param>
+            <param name="authenticationManager"></param>
+        </member>
+        <member name="M:WebsiteJimaine.ApplicationSignInManager.CreateUserIdentityAsync(WebsiteJimaine.Models.ApplicationUser)">
+            <summary>
+            Create User
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.ApplicationSignInManager.Create(Microsoft.AspNet.Identity.Owin.IdentityFactoryOptions{WebsiteJimaine.ApplicationSignInManager},Microsoft.Owin.IOwinContext)">
+            <summary>
+            Create
+            </summary>
+            <param name="options"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.RouteConfig">
+            <summary>
+            MVC Route Config
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Register routes
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="T:WebsiteJimaine.Startup">
+            <summary>
+            MVC Startup
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Startup.ConfigureAuth(Owin.IAppBuilder)">
+            <summary>
+            Weitere Informationen zum Konfigurieren der Authentifizierung finden Sie unter https://go.microsoft.com/fwlink/?LinkId=301864.
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:WebsiteJimaine.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:WebsiteJimaine.WebApiConfig">
+            <summary>
+            MVC Web Api Config
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Register Api
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ApiDescriptionExtensions">
+            <summary>
+            NuGet Area for Api Description
+            </summary>
+        </member>
         <member name="M:WebsiteJimaine.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
             <summary>
             Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
@@ -18,9 +154,72 @@
             or you can provide the samples for the requests/responses.
             </summary>
         </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.HelpPageConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Register Help Page
+            </summary>
+            <param name="config"></param>
+        </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.Controllers.HelpController">
             <summary>
             The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.Controllers.HelpController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.Controllers.HelpController.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.Controllers.HelpController.Configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.Controllers.HelpController.Index">
+            <summary>
+            Index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.Controllers.HelpController.Api(System.String)">
+            <summary>
+            Api
+            </summary>
+            <param name="apiId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.Controllers.HelpController.ResourceModel(System.String)">
+            <summary>
+            ResourceModel
+            </summary>
+            <param name="modelName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.HelpPageAreaRegistration">
+            <summary>
+            NuGet Help Page Config
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.HelpPageAreaRegistration.AreaName">
+            <summary>
+            Nmae of the area
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.HelpPageAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            Register Area
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.HelpPageConfigurationExtensions">
+            <summary>
+            
             </summary>
         </member>
         <member name="M:WebsiteJimaine.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
@@ -169,9 +368,123 @@
             An <see cref="T:WebsiteJimaine.Areas.HelpPage.Models.HelpPageApiModel"/>
             </returns>
         </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.CollectionModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.CollectionModelDescription.ElementDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.Properties">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.DictionaryModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription.Values">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.EnumValueDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription.KeyModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription.ValueModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescription">
             <summary>
             Describes a type model.
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescription.ModelType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescription.Name">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
@@ -179,9 +492,88 @@
             Generates model descriptions for given types.
             </summary>
         </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GeneratedModels">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GetOrCreateModelDescription(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="modelType"></param>
+            <returns></returns>
+        </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
             <summary>
             Use this attribute to change the name of the <see cref="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterAnnotation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.AnnotationAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterDescription.Annotations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterDescription.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.ParameterDescription.TypeDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Areas.HelpPage.ModelDescriptions.SimpleTypeModelDescription">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.Models.HelpPageApiModel">
@@ -418,10 +810,28 @@
             Gets the parameter names.
             </summary>
         </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.HelpPageSampleKey.ParameterType">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:WebsiteJimaine.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
             <summary>
             Gets the <see cref="P:WebsiteJimaine.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
             </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.HelpPageSampleKey.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.HelpPageSampleKey.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.ImageSample">
             <summary>
@@ -434,10 +844,64 @@
             </summary>
             <param name="src">The URL of an image.</param>
         </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.ImageSample.Src">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ImageSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ImageSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.ImageSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.InvalidSample">
             <summary>
             This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
             </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.InvalidSample.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.InvalidSample.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.InvalidSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.InvalidSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.InvalidSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.ObjectGenerator">
             <summary>
@@ -465,10 +929,50 @@
             Indicates whether the sample is used for request or response
             </summary>
         </member>
+        <member name="F:WebsiteJimaine.Areas.HelpPage.SampleDirection.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebsiteJimaine.Areas.HelpPage.SampleDirection.Response">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.TextSample">
             <summary>
             This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
             </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.TextSample.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="P:WebsiteJimaine.Areas.HelpPage.TextSample.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.TextSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.TextSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.TextSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:WebsiteJimaine.Areas.HelpPage.XmlDocumentationProvider">
             <summary>
@@ -480,6 +984,440 @@
             Initializes a new instance of the <see cref="T:WebsiteJimaine.Areas.HelpPage.XmlDocumentationProvider"/> class.
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="controllerDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="actionDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpParameterDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="parameterDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.XmlDocumentationProvider.GetResponseDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="actionDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.#ctor(WebsiteJimaine.ApplicationUserManager,WebsiteJimaine.ApplicationSignInManager)">
+            <summary>
+            
+            </summary>
+            <param name="userManager"></param>
+            <param name="signInManager"></param>
+        </member>
+        <member name="P:WebsiteJimaine.Controllers.AccountController.SignInManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Controllers.AccountController.UserManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.Login(System.String)">
+            <summary>
+            GET: /Account/Login
+            </summary>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.Login(WebsiteJimaine.Models.LoginViewModel,System.String)">
+            <summary>
+            POST: /Account/Login
+            </summary>
+            <param name="model"></param>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.VerifyCode(System.String,System.String,System.Boolean)">
+            <summary>
+            GET: /Account/VerifyCode
+            </summary>
+            <param name="provider"></param>
+            <param name="returnUrl"></param>
+            <param name="rememberMe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.VerifyCode(WebsiteJimaine.Models.VerifyCodeViewModel)">
+            <summary>
+            POST: /Account/VerifyCode
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.Register">
+            <summary>
+            GET: /Account/Register
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.Register(WebsiteJimaine.Models.RegisterViewModel)">
+            <summary>
+            POST: /Account/Register
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ConfirmEmail(System.String,System.String)">
+            <summary>
+            GET: /Account/ConfirmEmail
+            </summary>
+            <param name="userId"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ForgotPassword">
+            <summary>
+            GET: /Account/ForgotPassword
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ForgotPassword(WebsiteJimaine.Models.ForgotPasswordViewModel)">
+            <summary>
+            POST: /Account/ForgotPassword
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ForgotPasswordConfirmation">
+            <summary>
+            GET: /Account/ForgotPasswordConfirmation
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ResetPassword(System.String)">
+            <summary>
+            GET: /Account/ResetPassword
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ResetPassword(WebsiteJimaine.Models.ResetPasswordViewModel)">
+            <summary>
+            POST: /Account/ResetPassword
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ResetPasswordConfirmation">
+            <summary>
+            GET: /Account/ResetPasswordConfirmation
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ExternalLogin(System.String,System.String)">
+            <summary>
+            POST: /Account/ExternalLogin
+            </summary>
+            <param name="provider"></param>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.SendCode(System.String,System.Boolean)">
+            <summary>
+            GET: /Account/SendCode
+            </summary>
+            <param name="returnUrl"></param>
+            <param name="rememberMe"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.SendCode(WebsiteJimaine.Models.SendCodeViewModel)">
+            <summary>
+            POST: /Account/SendCode
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ExternalLoginCallback(System.String)">
+            <summary>
+            GET: /Account/ExternalLoginCallback
+            </summary>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ExternalLoginConfirmation(WebsiteJimaine.Models.ExternalLoginConfirmationViewModel,System.String)">
+            <summary>
+            POST: /Account/ExternalLoginConfirmation
+            </summary>
+            <param name="model"></param>
+            <param name="returnUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.LogOff">
+            <summary>
+            POST: /Account/LogOff
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.ExternalLoginFailure">
+            <summary>
+            GET: /Account/ExternalLoginFailure
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.AccountController.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:WebsiteJimaine.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.HomeController.About">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.HomeController.Contact">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.HomeController.DevelopingDays">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.HomeController.Privacy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.HomeController.ToDo">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.Controllers.ManageController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.#ctor(WebsiteJimaine.ApplicationUserManager,WebsiteJimaine.ApplicationSignInManager)">
+            <summary>
+            
+            </summary>
+            <param name="userManager"></param>
+            <param name="signInManager"></param>
+        </member>
+        <member name="P:WebsiteJimaine.Controllers.ManageController.SignInManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Controllers.ManageController.UserManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.Index(System.Nullable{WebsiteJimaine.Controllers.ManageController.ManageMessageId})">
+            <summary>
+            GET: /Manage/Index
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.RemoveLogin(System.String,System.String)">
+            <summary>
+            POST: /Manage/RemoveLogin
+            </summary>
+            <param name="loginProvider"></param>
+            <param name="providerKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.AddPhoneNumber">
+            <summary>
+            GET: /Manage/AddPhoneNumber
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.AddPhoneNumber(WebsiteJimaine.Models.AddPhoneNumberViewModel)">
+            <summary>
+            POST: /Manage/AddPhoneNumber
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.EnableTwoFactorAuthentication">
+            <summary>
+            POST: /Manage/EnableTwoFactorAuthentication
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.DisableTwoFactorAuthentication">
+            <summary>
+            POST: /Manage/DisableTwoFactorAuthentication
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.VerifyPhoneNumber(WebsiteJimaine.Models.VerifyPhoneNumberViewModel)">
+            <summary>
+            POST: /Manage/VerifyPhoneNumber
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.RemovePhoneNumber">
+            <summary>
+            POST: /Manage/RemovePhoneNumber
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.ChangePassword">
+            <summary>
+            GET: /Manage/ChangePassword
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.ChangePassword(WebsiteJimaine.Models.ChangePasswordViewModel)">
+            <summary>
+            POST: /Manage/ChangePassword
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.SetPassword">
+            <summary>
+            GET: /Manage/SetPassword
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.SetPassword(WebsiteJimaine.Models.SetPasswordViewModel)">
+            <summary>
+            POST: /Manage/SetPassword
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.ManageLogins(System.Nullable{WebsiteJimaine.Controllers.ManageController.ManageMessageId})">
+            <summary>
+            GET: /Manage/ManageLogins
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.LinkLogin(System.String)">
+            <summary>
+            POST: /Manage/LinkLogin
+            </summary>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.LinkLoginCallback">
+            <summary>
+            GET: /Manage/LinkLoginCallback
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.ManageController.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:WebsiteJimaine.Controllers.ManageController.ManageMessageId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebsiteJimaine.Controllers.ManageController.ManageMessageId.AddPhoneSuccess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebsiteJimaine.Controllers.ManageController.ManageMessageId.ChangePasswordSuccess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebsiteJimaine.Controllers.ManageController.ManageMessageId.SetTwoFactorSuccess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebsiteJimaine.Controllers.ManageController.ManageMessageId.SetPasswordSuccess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebsiteJimaine.Controllers.ManageController.ManageMessageId.RemoveLoginSuccess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebsiteJimaine.Controllers.ManageController.ManageMessageId.RemovePhoneSuccess">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:WebsiteJimaine.Controllers.ManageController.ManageMessageId.Error">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Controllers.TestController">
+            <summary>
+            Test Api to play with
+            </summary>
         </member>
         <member name="M:WebsiteJimaine.Controllers.TestController.GetNewRoute(System.Int32,System.Int32)">
             <summary>
@@ -496,6 +1434,372 @@
             With get
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.TestController.Get">
+            <summary>
+            GET api/Test 
+            cRud Read
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.TestController.Get(System.Int32)">
+            <summary>
+            GET api/Test/5
+            cRud Read
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.TestController.Post(System.String)">
+            <summary>
+            POST api/Test
+            Crud Create
+            Value in Body with ssl. Other than Get. Post > Get 
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.TestController.Put(System.Int32,System.String)">
+            <summary>
+            PUT api/Test/5
+            crUd Update
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.TestController.Delete(System.Int32)">
+            <summary>
+            DELETE api/Test/5
+            cruD Delete
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:WebsiteJimaine.MvcApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.MvcApplication.Application_Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ExternalLoginConfirmationViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ExternalLoginConfirmationViewModel.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ExternalLoginListViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ExternalLoginListViewModel.ReturnUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.SendCodeViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.SendCodeViewModel.SelectedProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.SendCodeViewModel.Providers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.SendCodeViewModel.ReturnUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.SendCodeViewModel.RememberMe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.VerifyCodeViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.VerifyCodeViewModel.Provider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.VerifyCodeViewModel.Code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.VerifyCodeViewModel.ReturnUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.VerifyCodeViewModel.RememberBrowser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.VerifyCodeViewModel.RememberMe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ForgotViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ForgotViewModel.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.LoginViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.LoginViewModel.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.LoginViewModel.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.LoginViewModel.RememberMe">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.RegisterViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.RegisterViewModel.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.RegisterViewModel.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.RegisterViewModel.ConfirmPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ResetPasswordViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ResetPasswordViewModel.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ResetPasswordViewModel.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ResetPasswordViewModel.ConfirmPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ResetPasswordViewModel.Code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ForgotPasswordViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ForgotPasswordViewModel.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ApplicationUser">
+            <summary>
+            Sie können Profildaten für den Benutzer hinzufügen, indem Sie der ApplicationUser-Klasse weitere Eigenschaften hinzufügen. Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?LinkID=317594.
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Models.ApplicationUser.GenerateUserIdentityAsync(Microsoft.AspNet.Identity.UserManager{WebsiteJimaine.Models.ApplicationUser})">
+            <summary>
+            
+            </summary>
+            <param name="manager"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ApplicationDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Models.ApplicationDbContext.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Models.ApplicationDbContext.Create">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebsiteJimaine.Models.IndexViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.IndexViewModel.HasPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.IndexViewModel.Logins">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.IndexViewModel.PhoneNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.IndexViewModel.TwoFactor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.IndexViewModel.BrowserRemembered">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ManageLoginsViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ManageLoginsViewModel.CurrentLogins">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ManageLoginsViewModel.OtherLogins">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.FactorViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.FactorViewModel.Purpose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.SetPasswordViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.SetPasswordViewModel.NewPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.SetPasswordViewModel.ConfirmPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ChangePasswordViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ChangePasswordViewModel.OldPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ChangePasswordViewModel.NewPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ChangePasswordViewModel.ConfirmPassword">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.AddPhoneNumberViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.AddPhoneNumberViewModel.Number">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.VerifyPhoneNumberViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.VerifyPhoneNumberViewModel.Code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.VerifyPhoneNumberViewModel.PhoneNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.ConfigureTwoFactorViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ConfigureTwoFactorViewModel.SelectedProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.ConfigureTwoFactorViewModel.Providers">
+            <summary>
+            
+            </summary>
         </member>
     </members>
 </doc>

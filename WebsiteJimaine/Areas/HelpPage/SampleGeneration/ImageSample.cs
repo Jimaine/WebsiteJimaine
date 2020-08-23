@@ -13,26 +13,39 @@ namespace WebsiteJimaine.Areas.HelpPage
         /// <param name="src">The URL of an image.</param>
         public ImageSample(string src)
         {
-            if (src == null)
-            {
-                throw new ArgumentNullException("src");
-            }
-            Src = src;
+            Src = src ?? throw new ArgumentNullException("src");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string Src { get; private set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
-            ImageSample other = obj as ImageSample;
-            return other != null && Src == other.Src;
+            //ImageSample other = obj as ImageSample;
+            //return other != null && Src == other.Src;
+            return obj is ImageSample other && Src == other.Src;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return Src.GetHashCode();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Src;

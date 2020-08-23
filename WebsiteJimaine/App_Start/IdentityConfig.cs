@@ -14,8 +14,16 @@ using WebsiteJimaine.Models;
 
 namespace WebsiteJimaine
 {
+    /// <summary>
+    /// MVC E-Mail config
+    /// </summary>
     public class EmailService : IIdentityMessageService
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public Task SendAsync(IdentityMessage message)
         {
             // Hier den E-Mail-Dienst einfügen, um eine E-Mail-Nachricht zu senden.
@@ -23,8 +31,16 @@ namespace WebsiteJimaine
         }
     }
 
+    /// <summary>
+    /// MVC Sms config
+    /// </summary>
     public class SmsService : IIdentityMessageService
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public Task SendAsync(IdentityMessage message)
         {
             // Hier den SMS-Dienst einfügen, um eine Textnachricht zu senden.
@@ -32,14 +48,26 @@ namespace WebsiteJimaine
         }
     }
 
-    // Konfigurieren des in dieser Anwendung verwendeten Anwendungsbenutzer-Managers. UserManager wird in ASP.NET Identity definiert und von der Anwendung verwendet.
+    /// <summary>
+    /// Konfigurieren des in dieser Anwendung verwendeten Anwendungsbenutzer-Managers. UserManager wird in ASP.NET Identity definiert und von der Anwendung verwendet.
+    /// </summary>
     public class ApplicationUserManager : UserManager<ApplicationUser>
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="store"></param>
         public ApplicationUserManager(IUserStore<ApplicationUser> store)
             : base(store)
         {
         }
 
+        /// <summary>
+        /// Create
+        /// </summary>
+        /// <param name="options"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public static ApplicationUserManager Create(IdentityFactoryOptions<ApplicationUserManager> options, IOwinContext context) 
         {
             var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(context.Get<ApplicationDbContext>()));
@@ -88,21 +116,40 @@ namespace WebsiteJimaine
         }
     }
 
-    // Anwendungsanmelde-Manager konfigurieren, der in dieser Anwendung verwendet wird.
+    /// <summary>
+    /// Anwendungsanmelde-Manager konfigurieren, der in dieser Anwendung verwendet wird.
+    /// </summary>
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="userManager"></param>
+        /// <param name="authenticationManager"></param>
         public ApplicationSignInManager(ApplicationUserManager userManager, IAuthenticationManager authenticationManager)
             : base(userManager, authenticationManager)
         {
         }
 
+        /// <summary>
+        /// Create User
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public override Task<ClaimsIdentity> CreateUserIdentityAsync(ApplicationUser user)
         {
             return user.GenerateUserIdentityAsync((ApplicationUserManager)UserManager);
         }
 
+        /// <summary>
+        /// Create
+        /// </summary>
+        /// <param name="options"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public static ApplicationSignInManager Create(IdentityFactoryOptions<ApplicationSignInManager> options, IOwinContext context)
         {
+            string _ = options.ToString(); // Don't want to throw away parameter but dont want to see Message
             return new ApplicationSignInManager(context.GetUserManager<ApplicationUserManager>(), context.Authentication);
         }
     }

@@ -5,8 +5,15 @@ using System.Web.Http;
 
 namespace WebsiteJimaine
 {
+    /// <summary>
+    /// MVC Web Api Config
+    /// </summary>
     public static class WebApiConfig
     {
+        /// <summary>
+        /// Register Api
+        /// </summary>
+        /// <param name="config"></param>
         public static void Register(HttpConfiguration config)
         {
             // Web-API-Konfiguration und -Dienste

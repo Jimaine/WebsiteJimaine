@@ -5,6 +5,9 @@ using System.Web.Http.Description;
 
 namespace WebsiteJimaine.Areas.HelpPage
 {
+    /// <summary>
+    /// NuGet Area for Api Description
+    /// </summary>
     public static class ApiDescriptionExtensions
     {
         /// <summary>

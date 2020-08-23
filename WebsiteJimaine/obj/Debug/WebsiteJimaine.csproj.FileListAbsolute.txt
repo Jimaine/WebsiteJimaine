@@ -120,6 +120,7 @@ C:\Users\mykey\source\playground\WebsiteJimaine\WebsiteJimaine\obj\Debug\Website
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\WebsiteJimaine.dll.config
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\WebsiteJimaine.dll
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\WebsiteJimaine.pdb
+C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\Documentation.xml
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\roslyn\csc.exe
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\roslyn\csc.exe.config
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\roslyn\csc.rsp
@@ -231,8 +232,8 @@ C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\de\EntityFramework
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\de\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\de\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\de\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\obj\Debug\WebsiteJimaine.csprojAssemblyReference.cache
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\obj\Debug\WebsiteJimaine.csproj.CoreCompileInputs.cache
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\obj\Debug\WebsiteJimaine.csproj.CopyComplete
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\obj\Debug\WebsiteJimaine.dll
 C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\obj\Debug\WebsiteJimaine.pdb
-C:\Users\mykey\source\repos\WebsiteJimaine\WebsiteJimaine\bin\Documentation.xml

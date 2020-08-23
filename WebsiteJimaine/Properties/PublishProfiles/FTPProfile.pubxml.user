@@ -10,6 +10,72 @@ indem Sie diese MSBuild-Datei bearbeiten. Weitere Informationen hierzu finden Si
     <_PublishTargetUrl>ftp://jimaine.de/jimaine.de\web</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="App_Data/Documentation.xml">
+      <publishTime>08/23/2020 19:10:13</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/HelpPage.css">
+      <publishTime>08/22/2020 20:37:17</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
+      <publishTime>08/22/2020 20:37:13</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
+      <publishTime>08/22/2020 20:37:13</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml">
+      <publishTime>08/22/2020 20:37:13</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml">
+      <publishTime>08/22/2020 20:37:12</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml">
+      <publishTime>08/22/2020 20:37:11</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml">
+      <publishTime>08/22/2020 20:37:11</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml">
+      <publishTime>08/22/2020 20:37:11</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
+      <publishTime>08/22/2020 20:37:11</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/ResourceModel.cshtml">
+      <publishTime>08/22/2020 20:37:11</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
+      <publishTime>08/22/2020 20:37:11</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Web.config">
+      <publishTime>08/22/2020 20:37:11</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/_ViewStart.cshtml">
+      <publishTime>08/22/2020 20:37:11</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>08/20/2020 19:57:17</publishTime>
     </File>
@@ -266,10 +332,10 @@ indem Sie diese MSBuild-Datei bearbeiten. Weitere Informationen hierzu finden Si
       <publishTime>08/20/2020 19:57:19</publishTime>
     </File>
     <File Include="bin/WebsiteJimaine.dll">
-      <publishTime>08/22/2020 12:05:13</publishTime>
+      <publishTime>08/23/2020 19:11:10</publishTime>
     </File>
     <File Include="bin/WebsiteJimaine.pdb">
-      <publishTime>08/22/2020 12:05:13</publishTime>
+      <publishTime>08/23/2020 19:11:10</publishTime>
     </File>
     <File Include="Content/bootstrap-grid.css">
       <publishTime>08/20/2020 19:57:16</publishTime>
@@ -731,7 +797,7 @@ indem Sie diese MSBuild-Datei bearbeiten. Weitere Informationen hierzu finden Si
       <publishTime>08/20/2020 19:57:16</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/20/2020 19:57:16</publishTime>
+      <publishTime>08/22/2020 20:46:31</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>08/20/2020 19:57:16</publishTime>
@@ -743,7 +809,7 @@ indem Sie diese MSBuild-Datei bearbeiten. Weitere Informationen hierzu finden Si
       <publishTime>08/20/2020 19:57:16</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/22/2020 12:05:14</publishTime>
+      <publishTime>08/23/2020 19:02:53</publishTime>
     </File>
   </ItemGroup>
 </Project>

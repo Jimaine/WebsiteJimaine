@@ -9,8 +9,14 @@ using System.Web.Routing;
 
 namespace WebsiteJimaine
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MvcApplication : System.Web.HttpApplication
     {
+        /// <summary>
+        /// 
+        /// </summary>
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

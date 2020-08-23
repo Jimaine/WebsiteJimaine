@@ -13,24 +13,43 @@ namespace WebsiteJimaine.Areas.HelpPage.Controllers
     {
         private const string ErrorViewName = "Error";
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public HelpController()
             : this(GlobalConfiguration.Configuration)
         {
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="config"></param>
         public HelpController(HttpConfiguration config)
         {
             Configuration = config;
         }
 
+        /// <summary>
+        /// Configuration
+        /// </summary>
         public HttpConfiguration Configuration { get; private set; }
 
+        /// <summary>
+        /// Index
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
             return View(Configuration.Services.GetApiExplorer().ApiDescriptions);
         }
 
+        /// <summary>
+        /// Api
+        /// </summary>
+        /// <param name="apiId"></param>
+        /// <returns></returns>
         public ActionResult Api(string apiId)
         {
             if (!String.IsNullOrEmpty(apiId))
@@ -45,13 +64,17 @@ namespace WebsiteJimaine.Areas.HelpPage.Controllers
             return View(ErrorViewName);
         }
 
+        /// <summary>
+        /// ResourceModel
+        /// </summary>
+        /// <param name="modelName"></param>
+        /// <returns></returns>
         public ActionResult ResourceModel(string modelName)
         {
             if (!String.IsNullOrEmpty(modelName))
             {
                 ModelDescriptionGenerator modelDescriptionGenerator = Configuration.GetModelDescriptionGenerator();
-                ModelDescription modelDescription;
-                if (modelDescriptionGenerator.GeneratedModels.TryGetValue(modelName, out modelDescription))
+                if (modelDescriptionGenerator.GeneratedModels.TryGetValue(modelName, out ModelDescription modelDescription))
                 {
                     return View(modelDescription);
                 }

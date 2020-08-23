@@ -7,6 +7,9 @@ using System.Web.Http;
 
 namespace WebsiteJimaine.Controllers
 {
+    /// <summary>
+    /// Test Api to play with
+    /// </summary>
     public class TestController : ApiController
     {
         /// <summary>
@@ -44,39 +47,57 @@ namespace WebsiteJimaine.Controllers
             return new string[] { "Lorem", "Ipsum", "Dolor", "Sit", "Amet" };
         }
 
-        // GET api/<controller>
+        /// <summary>
+        /// GET api/Test 
+        /// cRud Read
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<string> Get()
         {
             // Select
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<controller>/5
+        /// <summary>
+        /// GET api/Test/5
+        /// cRud Read
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public string Get(int id)
         {
             return $"value {id}";
         }
 
-        // POST api/<controller>
+        /// <summary>
+        /// POST api/Test
+        /// Crud Create
+        /// Value in Body with ssl. Other than Get. Post > Get 
+        /// </summary>
+        /// <param name="value"></param>
         public void Post([FromBody] string value)
         {
-            // Create
-            // in Body with ssl. Other than Get. Post > Get 
-
             _ = value.Trim();
         }
 
-        // PUT api/<controller>/5
+        /// <summary>
+        /// PUT api/Test/5
+        /// crUd Update
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
         public void Put(int id, [FromBody] string value)
         {
-            // Update
             _ = value.ToCharArray()[id];
         }
 
-        // DELETE api/<controller>/5
+        /// <summary>
+        /// DELETE api/Test/5
+        /// cruD Delete
+        /// </summary>
+        /// <param name="id"></param>
         public void Delete(int id)
         {
-            // Delete
             _ = id / id;
         }
     }

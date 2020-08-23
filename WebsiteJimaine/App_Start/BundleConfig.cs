@@ -3,9 +3,15 @@ using System.Web.Optimization;
 
 namespace WebsiteJimaine
 {
+    /// <summary>
+    /// MVC config for Bundles
+    /// </summary>
     public class BundleConfig
     {
-        // Weitere Informationen zur Bündelung finden Sie unter https://go.microsoft.com/fwlink/?LinkId=301862.
+        /// <summary>
+        /// Weitere Informationen zur Bündelung finden Sie unter https://go.microsoft.com/fwlink/?LinkId=301862.
+        /// </summary>
+        /// <param name="bundles"></param>
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
