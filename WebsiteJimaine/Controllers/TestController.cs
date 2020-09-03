@@ -16,8 +16,8 @@ namespace WebsiteJimaine.Controllers
         /// Override Default Route Test with more Parameters
         /// With get and post
         /// </summary>
-        /// <param name="userId"></param>
-        /// <param name="age"></param>
+        /// <param name="userId">SQL ID of the User</param>
+        /// <param name="age">The eye color of the user</param>
         /// <returns></returns>
         [Route("api/Test/GetNewRoute/{userId:int}/{age:int}")]
         [HttpGet, HttpPost]
@@ -62,7 +62,7 @@ namespace WebsiteJimaine.Controllers
         /// GET api/Test/5
         /// cRud Read
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">DIE</param>
         /// <returns></returns>
         public string Get(int id)
         {
@@ -74,7 +74,7 @@ namespace WebsiteJimaine.Controllers
         /// Crud Create
         /// Value in Body with ssl. Other than Get. Post > Get 
         /// </summary>
-        /// <param name="value"></param>
+        /// <param name="value">Voldemorts Ancient Love Uncover Elves</param>
         public void Post([FromBody] string value)
         {
             _ = value.Trim();
@@ -84,8 +84,8 @@ namespace WebsiteJimaine.Controllers
         /// PUT api/Test/5
         /// crUd Update
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="value"></param>
+        /// <param name="id">hihi</param>
+        /// <param name="value">höhö</param>
         public void Put(int id, [FromBody] string value)
         {
             _ = value.ToCharArray()[id];
@@ -95,7 +95,7 @@ namespace WebsiteJimaine.Controllers
         /// DELETE api/Test/5
         /// cruD Delete
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">Ai DIE</param>
         public void Delete(int id)
         {
             _ = id / id;

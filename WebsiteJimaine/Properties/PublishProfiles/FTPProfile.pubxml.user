@@ -11,13 +11,13 @@ indem Sie diese MSBuild-Datei bearbeiten. Weitere Informationen hierzu finden Si
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/Documentation.xml">
-      <publishTime>08/23/2020 19:10:13</publishTime>
+      <publishTime>09/03/2020 21:12:24</publishTime>
     </File>
     <File Include="Areas/HelpPage/HelpPage.css">
-      <publishTime>08/22/2020 20:37:17</publishTime>
+      <publishTime>09/03/2020 21:05:15</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
-      <publishTime>08/22/2020 20:37:13</publishTime>
+      <publishTime>09/03/2020 21:00:38</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
       <publishTime>08/22/2020 20:37:13</publishTime>
@@ -62,19 +62,19 @@ indem Sie diese MSBuild-Datei bearbeiten. Weitere Informationen hierzu finden Si
       <publishTime>08/22/2020 20:37:11</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
-      <publishTime>08/22/2020 20:37:11</publishTime>
+      <publishTime>09/03/2020 21:01:04</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Help/ResourceModel.cshtml">
-      <publishTime>08/22/2020 20:37:11</publishTime>
+      <publishTime>09/03/2020 21:01:14</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
-      <publishTime>08/22/2020 20:37:11</publishTime>
+      <publishTime>09/03/2020 20:23:36</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/Web.config">
       <publishTime>08/22/2020 20:37:11</publishTime>
     </File>
     <File Include="Areas/HelpPage/Views/_ViewStart.cshtml">
-      <publishTime>08/22/2020 20:37:11</publishTime>
+      <publishTime>09/03/2020 20:55:05</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>08/20/2020 19:57:17</publishTime>
@@ -332,10 +332,10 @@ indem Sie diese MSBuild-Datei bearbeiten. Weitere Informationen hierzu finden Si
       <publishTime>08/20/2020 19:57:19</publishTime>
     </File>
     <File Include="bin/WebsiteJimaine.dll">
-      <publishTime>08/23/2020 19:11:10</publishTime>
+      <publishTime>09/03/2020 21:13:47</publishTime>
     </File>
     <File Include="bin/WebsiteJimaine.pdb">
-      <publishTime>08/23/2020 19:11:10</publishTime>
+      <publishTime>09/03/2020 21:13:47</publishTime>
     </File>
     <File Include="Content/bootstrap-grid.css">
       <publishTime>08/20/2020 19:57:16</publishTime>
