@@ -4,14 +4,43 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebsiteJimaine.Models;
 
 namespace WebsiteJimaine.Controllers
 {
     /// <summary>
     /// Test Api to play with
+    /// [Authorize]
+    /// [BasicAuthenticationAttribute("your-username", "your-password", BasicRealm = "your-realm")]
     /// </summary>
     public class TestController : ApiController
     {
+        /// <summary>
+        /// Authorize Test
+        /// </summary>
+        /// <returns></returns>
+        [Route("api/Test/GetBasicAuthorized")]
+        [HttpGet]
+        [BasicAuthenticationAttribute("your-username", "your-password", BasicRealm = "your-realm")]
+        public IEnumerable<string> GetBasicAuthorized()
+        {
+            // Select
+            return new string[] { "The cake is a lie!" };
+        }
+
+        /// <summary>
+        /// Authorize Test
+        /// </summary>
+        /// <returns></returns>
+        [Route("api/Test/GetAuthorized")]
+        [HttpGet]
+        [Authorize]
+        public IEnumerable<string> GetAuthorized()
+        {
+            // Select
+            return new string[] { "No Candy for you!" };
+        }
+
         /// <summary>
         /// Override Default Route Test with more Parameters
         /// With get and post
