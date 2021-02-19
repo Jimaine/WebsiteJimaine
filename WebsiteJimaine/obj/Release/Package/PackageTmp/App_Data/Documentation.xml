@@ -1417,7 +1417,21 @@
         <member name="T:WebsiteJimaine.Controllers.TestController">
             <summary>
             Test Api to play with
+            [Authorize]
+            [BasicAuthenticationAttribute("your-username", "your-password", BasicRealm = "your-realm")]
             </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.TestController.GetBasicAuthorized">
+            <summary>
+            Authorize Test
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebsiteJimaine.Controllers.TestController.GetAuthorized">
+            <summary>
+            Authorize Test
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:WebsiteJimaine.Controllers.TestController.GetNewRoute(System.Int32,System.Int32)">
             <summary>
@@ -1642,6 +1656,39 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="T:WebsiteJimaine.Models.BasicAuthenticationAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.BasicAuthenticationAttribute.BasicRealm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.BasicAuthenticationAttribute.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WebsiteJimaine.Models.BasicAuthenticationAttribute.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WebsiteJimaine.Models.BasicAuthenticationAttribute.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:WebsiteJimaine.Models.BasicAuthenticationAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="filterContext"></param>
         </member>
         <member name="T:WebsiteJimaine.Models.ApplicationUser">
             <summary>
